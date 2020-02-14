@@ -7,6 +7,7 @@ The MLAPI has two parts to it's messaging system. RPC messages and Custom Messag
 
 ### RPC Messages
 RPC messages are the most common and easy to use type of message. There are two types of RPC messages. ServerRPC and ClientRPC. ServerRPC methods are invoked by clients (or host if there is no dedicated server) and runs on the Server and ClientRPC methods are invoked by the server but ran on one or more clients.
+You must use MLAPI.Messaging namespace and inherit from NetworkedBehaviour.
 
 #### Modes
 The RPC methods can be used in two "modes". One is a performance mode where the code is a bit larger but it offers better performance. The other mode is the convenience mode. **The only difference between the two is that the convenience mode boxes all the values on the sender and receiver. If you don't know what that means, use the convenience mode otherwise you are most likely wasting your time.** The performance mode is designed for 100% performance as the MLAPI's goal is to be a general purpose networking library that is not to limit the games capabilities.
